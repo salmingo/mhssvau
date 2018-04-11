@@ -1,0 +1,2 @@
+bin_PROGRAMS=mhssvau
+mhssvau_SOURCES=mhssvau.cpp
