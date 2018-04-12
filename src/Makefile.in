@@ -102,8 +102,9 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_mhssvau_OBJECTS = IOServiceKeep.$(OBJEXT) tcpasio.$(OBJEXT) \
-	mhssvau.$(OBJEXT)
+am_mhssvau_OBJECTS = ConfigurationParameter.$(OBJEXT) \
+	IOServiceKeep.$(OBJEXT) tcpasio.$(OBJEXT) daemon.$(OBJEXT) \
+	GLog.$(OBJEXT) MessageQueue.$(OBJEXT) mhssvau.$(OBJEXT)
 mhssvau_OBJECTS = $(am_mhssvau_OBJECTS)
 am__DEPENDENCIES_1 =
 mhssvau_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -124,7 +125,9 @@ am__v_at_1 =
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
-am__depfiles_remade = ./$(DEPDIR)/IOServiceKeep.Po \
+am__depfiles_remade = ./$(DEPDIR)/ConfigurationParameter.Po \
+	./$(DEPDIR)/GLog.Po ./$(DEPDIR)/IOServiceKeep.Po \
+	./$(DEPDIR)/MessageQueue.Po ./$(DEPDIR)/daemon.Po \
 	./$(DEPDIR)/mhssvau.Po ./$(DEPDIR)/tcpasio.Po
 am__mv = mv -f
 CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
@@ -175,6 +178,10 @@ AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
+CC = @CC@
+CCDEPMODE = @CCDEPMODE@
+CFLAGS = @CFLAGS@
+CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CXX = @CXX@
 CXXDEPMODE = @CXXDEPMODE@
@@ -185,7 +192,9 @@ DEPDIR = @DEPDIR@
 ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
+EGREP = @EGREP@
 EXEEXT = @EXEEXT@
+GREP = @GREP@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -214,6 +223,7 @@ abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
 abs_top_srcdir = @abs_top_srcdir@
+ac_ct_CC = @ac_ct_CC@
 ac_ct_CXX = @ac_ct_CXX@
 am__include = @am__include@
 am__leading_dot = @am__leading_dot@
@@ -264,7 +274,9 @@ target_vendor = @target_vendor@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-mhssvau_SOURCES = IOServiceKeep.cpp tcpasio.cpp mhssvau.cpp
+mhssvau_SOURCES = ConfigurationParameter.cpp IOServiceKeep.cpp tcpasio.cpp daemon.cpp\
+				GLog.cpp MessageQueue.cpp mhssvau.cpp
+
 mhssvau_LDFLAGS = -L/usr/local/lib
 BOOST_LIBS = -lboost_system-mt -lboost_thread-mt -lboost_filesystem-mt
 mhssvau_LDADD = ${BOOST_LIBS} -lpthread
@@ -354,7 +366,11 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ConfigurationParameter.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/GLog.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/IOServiceKeep.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/MessageQueue.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/daemon.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mhssvau.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tcpasio.Po@am__quote@ # am--include-marker
 
@@ -505,7 +521,11 @@ clean: clean-am
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 
 distclean: distclean-am
-		-rm -f ./$(DEPDIR)/IOServiceKeep.Po
+		-rm -f ./$(DEPDIR)/ConfigurationParameter.Po
+	-rm -f ./$(DEPDIR)/GLog.Po
+	-rm -f ./$(DEPDIR)/IOServiceKeep.Po
+	-rm -f ./$(DEPDIR)/MessageQueue.Po
+	-rm -f ./$(DEPDIR)/daemon.Po
 	-rm -f ./$(DEPDIR)/mhssvau.Po
 	-rm -f ./$(DEPDIR)/tcpasio.Po
 	-rm -f Makefile
@@ -553,7 +573,11 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-		-rm -f ./$(DEPDIR)/IOServiceKeep.Po
+		-rm -f ./$(DEPDIR)/ConfigurationParameter.Po
+	-rm -f ./$(DEPDIR)/GLog.Po
+	-rm -f ./$(DEPDIR)/IOServiceKeep.Po
+	-rm -f ./$(DEPDIR)/MessageQueue.Po
+	-rm -f ./$(DEPDIR)/daemon.Po
 	-rm -f ./$(DEPDIR)/mhssvau.Po
 	-rm -f ./$(DEPDIR)/tcpasio.Po
 	-rm -f Makefile

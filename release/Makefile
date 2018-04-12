@@ -159,8 +159,8 @@ CTAGS = ctags
 CSCOPE = cscope
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in AUTHORS \
-	COPYING ChangeLog INSTALL NEWS README config.guess config.sub \
-	install-sh missing
+	COPYING ChangeLog INSTALL NEWS README compile config.guess \
+	config.sub depcomp install-sh missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -210,6 +210,10 @@ AUTOCONF = ${SHELL} /Users/lxm/Workspace/mhssvau/missing autoconf
 AUTOHEADER = ${SHELL} /Users/lxm/Workspace/mhssvau/missing autoheader
 AUTOMAKE = ${SHELL} /Users/lxm/Workspace/mhssvau/missing automake-1.16
 AWK = awk
+CC = gcc
+CCDEPMODE = depmode=gcc3
+CFLAGS = -g -O2
+CPP = gcc -E
 CPPFLAGS = 
 CXX = g++
 CXXDEPMODE = depmode=gcc3
@@ -220,7 +224,9 @@ DEPDIR = .deps
 ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
+EGREP = /usr/bin/grep -E
 EXEEXT = 
+GREP = /usr/bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -249,6 +255,7 @@ abs_builddir = /Users/lxm/Workspace/mhssvau/release
 abs_srcdir = /Users/lxm/Workspace/mhssvau/release/..
 abs_top_builddir = /Users/lxm/Workspace/mhssvau/release
 abs_top_srcdir = /Users/lxm/Workspace/mhssvau/release/..
+ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
 am__leading_dot = .

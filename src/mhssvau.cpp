@@ -25,8 +25,46 @@
  *    当被控制程序退出时, 向消息队列写入标志字
  *
  */
+#include <string.h>
+#include "GLog.h"
+#include "globaldef.h"
+#include "daemon.h"
+#include "ConfigurationParameter.h"
 
-int main(void) {
+GLog g_Log;
+
+int main(int argc, char **argv) {
+	if (argc >= 2) {// 处理命令行参数
+		if (strcmp(argv[1], "-d") == 0) {
+			ConfigurationParameter param("mhssvau.xml");
+			param.Init();
+		}
+		else g_Log.Write("Usage: mhssvau <-d>\n");
+	}
+	else {// 常规工作模式
+		boost::asio::io_service ios;
+		boost::asio::signal_set signals(ios, SIGINT, SIGTERM);  // interrupt signal
+		signals.async_wait(boost::bind(&boost::asio::io_service::stop, &ios));
+
+		if (!MakeItDaemon(ios)) return 1;
+		if (!isProcSingleton(gPIDPath)) {
+			g_Log.Write("%s is already running or failed to access PID file", DAEMON_NAME);
+			return 2;
+		}
+
+		g_Log.Write("Try to launch %s %s %s as daemon", DAEMON_NAME, DAEMON_VERSION, DAEMON_AUTHORITY);
+		// 主程序入口
+	//	GeneralControl gc(&ios);
+	//	if (gc.StartService()) {
+	//		g_Log.Write("Daemon goes running");
+	//		ios.run();
+	//		gc.StopService();
+	//	}
+	//	else {
+	//		g_Log.Write(LOG_FAULT, NULL, "Fail to launch %s", DAEMON_NAME);
+	//	}
+		g_Log.Write("Daemon stopped");
+	}
 
 	return 0;
 }

@@ -30,8 +30,8 @@ Kernel configured for up to 4 processors.
 Processor type: x86_64h (Intel x86-64h Haswell)
 Processors active: 0 1 2 3
 Primary memory available: 16.00 gigabytes
-Default processor set: 331 tasks, 1323 threads, 4 processors
-Load average: 2.45, Mach factor: 1.54
+Default processor set: 355 tasks, 1503 threads, 4 processors
+Load average: 2.24, Mach factor: 1.91
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -49,95 +49,768 @@ PATH: /Library/TeX/texbin
 ## Core tests. ##
 ## ----------- ##
 
-configure:1838: checking build system type
-configure:1852: result: x86_64-apple-darwin17.5.0
-configure:1872: checking host system type
-configure:1885: result: x86_64-apple-darwin17.5.0
-configure:1905: checking target system type
-configure:1918: result: x86_64-apple-darwin17.5.0
-configure:1961: checking for a BSD-compatible install
-configure:2029: result: /usr/bin/install -c
-configure:2040: checking whether build environment is sane
-configure:2095: result: yes
-configure:2246: checking for a thread-safe mkdir -p
-configure:2285: result: ../install-sh -c -d
-configure:2292: checking for gawk
-configure:2322: result: no
-configure:2292: checking for mawk
-configure:2322: result: no
-configure:2292: checking for nawk
-configure:2322: result: no
-configure:2292: checking for awk
-configure:2308: found /usr/bin/awk
-configure:2319: result: awk
-configure:2330: checking whether make sets $(MAKE)
-configure:2352: result: yes
-configure:2381: checking whether make supports nested variables
-configure:2398: result: yes
-configure:2583: checking for g++
-configure:2599: found /usr/bin/g++
-configure:2610: result: g++
-configure:2637: checking for C++ compiler version
-configure:2646: g++ --version >&5
+configure:2346: checking build system type
+configure:2360: result: x86_64-apple-darwin17.5.0
+configure:2380: checking host system type
+configure:2393: result: x86_64-apple-darwin17.5.0
+configure:2413: checking target system type
+configure:2426: result: x86_64-apple-darwin17.5.0
+configure:2469: checking for a BSD-compatible install
+configure:2537: result: /usr/bin/install -c
+configure:2548: checking whether build environment is sane
+configure:2603: result: yes
+configure:2754: checking for a thread-safe mkdir -p
+configure:2793: result: ../install-sh -c -d
+configure:2800: checking for gawk
+configure:2830: result: no
+configure:2800: checking for mawk
+configure:2830: result: no
+configure:2800: checking for nawk
+configure:2830: result: no
+configure:2800: checking for awk
+configure:2816: found /usr/bin/awk
+configure:2827: result: awk
+configure:2838: checking whether make sets $(MAKE)
+configure:2860: result: yes
+configure:2889: checking whether make supports nested variables
+configure:2906: result: yes
+configure:3091: checking for g++
+configure:3107: found /usr/bin/g++
+configure:3118: result: g++
+configure:3145: checking for C++ compiler version
+configure:3154: g++ --version >&5
 Apple LLVM version 9.1.0 (clang-902.0.39.1)
 Target: x86_64-apple-darwin17.5.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
-configure:2657: $? = 0
-configure:2646: g++ -v >&5
+configure:3165: $? = 0
+configure:3154: g++ -v >&5
 Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 9.1.0 (clang-902.0.39.1)
 Target: x86_64-apple-darwin17.5.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
-configure:2657: $? = 0
-configure:2646: g++ -V >&5
+configure:3165: $? = 0
+configure:3154: g++ -V >&5
 clang: error: argument to '-V' is missing (expected 1 value)
 clang: error: no input files
-configure:2657: $? = 1
-configure:2646: g++ -qversion >&5
+configure:3165: $? = 1
+configure:3154: g++ -qversion >&5
 clang: error: unknown argument: '-qversion'
 clang: error: no input files
-configure:2657: $? = 1
-configure:2677: checking whether the C++ compiler works
-configure:2699: g++    conftest.cpp  >&5
-configure:2703: $? = 0
-configure:2751: result: yes
-configure:2754: checking for C++ compiler default output file name
-configure:2756: result: a.out
-configure:2762: checking for suffix of executables
-configure:2769: g++ -o conftest    conftest.cpp  >&5
-configure:2773: $? = 0
-configure:2795: result: 
-configure:2817: checking whether we are cross compiling
-configure:2825: g++ -o conftest    conftest.cpp  >&5
-configure:2829: $? = 0
-configure:2836: ./conftest
-configure:2840: $? = 0
-configure:2855: result: no
-configure:2860: checking for suffix of object files
-configure:2882: g++ -c   conftest.cpp >&5
-configure:2886: $? = 0
-configure:2907: result: o
-configure:2911: checking whether we are using the GNU C++ compiler
-configure:2930: g++ -c   conftest.cpp >&5
-configure:2930: $? = 0
-configure:2939: result: yes
-configure:2948: checking whether g++ accepts -g
-configure:2968: g++ -c -g  conftest.cpp >&5
-configure:2968: $? = 0
-configure:3009: result: yes
-configure:3035: checking whether make supports the include directive
-configure:3050: make -f confmf.GNU && cat confinc.out
+configure:3165: $? = 1
+configure:3185: checking whether the C++ compiler works
+configure:3207: g++    conftest.cpp  >&5
+configure:3211: $? = 0
+configure:3259: result: yes
+configure:3262: checking for C++ compiler default output file name
+configure:3264: result: a.out
+configure:3270: checking for suffix of executables
+configure:3277: g++ -o conftest    conftest.cpp  >&5
+configure:3281: $? = 0
+configure:3303: result: 
+configure:3325: checking whether we are cross compiling
+configure:3333: g++ -o conftest    conftest.cpp  >&5
+configure:3337: $? = 0
+configure:3344: ./conftest
+configure:3348: $? = 0
+configure:3363: result: no
+configure:3368: checking for suffix of object files
+configure:3390: g++ -c   conftest.cpp >&5
+configure:3394: $? = 0
+configure:3415: result: o
+configure:3419: checking whether we are using the GNU C++ compiler
+configure:3438: g++ -c   conftest.cpp >&5
+configure:3438: $? = 0
+configure:3447: result: yes
+configure:3456: checking whether g++ accepts -g
+configure:3476: g++ -c -g  conftest.cpp >&5
+configure:3476: $? = 0
+configure:3517: result: yes
+configure:3543: checking whether make supports the include directive
+configure:3558: make -f confmf.GNU && cat confinc.out
 this is the am__doit target
-configure:3053: $? = 0
-configure:3072: result: yes (GNU style)
-configure:3097: checking dependency style of g++
-configure:3208: result: gcc3
-configure:3335: checking that generated files are newer than configure
-configure:3341: result: done
-configure:3364: creating ./config.status
+configure:3561: $? = 0
+configure:3580: result: yes (GNU style)
+configure:3605: checking dependency style of g++
+configure:3716: result: gcc3
+configure:3779: checking for gcc
+configure:3795: found /usr/bin/gcc
+configure:3806: result: gcc
+configure:4035: checking for C compiler version
+configure:4044: gcc --version >&5
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+configure:4055: $? = 0
+configure:4044: gcc -v >&5
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+configure:4055: $? = 0
+configure:4044: gcc -V >&5
+clang: error: argument to '-V' is missing (expected 1 value)
+clang: error: no input files
+configure:4055: $? = 1
+configure:4044: gcc -qversion >&5
+clang: error: unknown argument: '-qversion'
+clang: error: no input files
+configure:4055: $? = 1
+configure:4059: checking whether we are using the GNU C compiler
+configure:4078: gcc -c   conftest.c >&5
+configure:4078: $? = 0
+configure:4087: result: yes
+configure:4096: checking whether gcc accepts -g
+configure:4116: gcc -c -g  conftest.c >&5
+configure:4116: $? = 0
+configure:4157: result: yes
+configure:4174: checking for gcc option to accept ISO C89
+configure:4237: gcc  -c -g -O2  conftest.c >&5
+configure:4237: $? = 0
+configure:4250: result: none needed
+configure:4275: checking whether gcc understands -c and -o together
+configure:4297: gcc -c conftest.c -o conftest2.o
+configure:4300: $? = 0
+configure:4297: gcc -c conftest.c -o conftest2.o
+configure:4300: $? = 0
+configure:4312: result: yes
+configure:4331: checking dependency style of gcc
+configure:4442: result: gcc3
+configure:4462: checking for ftruncate
+configure:4462: gcc -o conftest -g -O2   conftest.c  >&5
+configure:4462: $? = 0
+configure:4462: result: yes
+configure:4462: checking for mkdir
+configure:4462: gcc -o conftest -g -O2   conftest.c  >&5
+configure:4462: $? = 0
+configure:4462: result: yes
+configure:4476: checking how to run the C preprocessor
+configure:4507: gcc -E  conftest.c
+configure:4507: $? = 0
+configure:4521: gcc -E  conftest.c
+conftest.c:13:10: fatal error: 'ac_nonexistent.h' file not found
+#include <ac_nonexistent.h>
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+configure:4521: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mhssvau"
+| #define PACKAGE_TARNAME "mhssvau"
+| #define PACKAGE_VERSION "1.0"
+| #define PACKAGE_STRING "mhssvau 1.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "mhssvau"
+| #define VERSION "1.0"
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_MKDIR 1
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:4546: result: gcc -E
+configure:4566: gcc -E  conftest.c
+configure:4566: $? = 0
+configure:4580: gcc -E  conftest.c
+conftest.c:13:10: fatal error: 'ac_nonexistent.h' file not found
+#include <ac_nonexistent.h>
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+configure:4580: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mhssvau"
+| #define PACKAGE_TARNAME "mhssvau"
+| #define PACKAGE_VERSION "1.0"
+| #define PACKAGE_STRING "mhssvau 1.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "mhssvau"
+| #define VERSION "1.0"
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_MKDIR 1
+| /* end confdefs.h.  */
+| #include <ac_nonexistent.h>
+configure:4609: checking for grep that handles long lines and -e
+configure:4667: result: /usr/bin/grep
+configure:4672: checking for egrep
+configure:4734: result: /usr/bin/grep -E
+configure:4739: checking for ANSI C header files
+configure:4759: gcc -c -g -O2  conftest.c >&5
+configure:4759: $? = 0
+configure:4832: gcc -o conftest -g -O2   conftest.c  >&5
+configure:4832: $? = 0
+configure:4832: ./conftest
+configure:4832: $? = 0
+configure:4843: result: yes
+configure:4856: checking for sys/types.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4856: checking for sys/stat.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4856: checking for stdlib.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4856: checking for string.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4856: checking for memory.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4856: checking for strings.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4856: checking for inttypes.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4856: checking for stdint.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4856: checking for unistd.h
+configure:4856: gcc -c -g -O2  conftest.c >&5
+configure:4856: $? = 0
+configure:4856: result: yes
+configure:4871: checking fcntl.h usability
+configure:4871: gcc -c -g -O2  conftest.c >&5
+configure:4871: $? = 0
+configure:4871: result: yes
+configure:4871: checking fcntl.h presence
+configure:4871: gcc -E  conftest.c
+configure:4871: $? = 0
+configure:4871: result: yes
+configure:4871: checking for fcntl.h
+configure:4871: result: yes
+configure:4871: checking for string.h
+configure:4871: result: yes
+configure:4871: checking syslog.h usability
+configure:4871: gcc -c -g -O2  conftest.c >&5
+configure:4871: $? = 0
+configure:4871: result: yes
+configure:4871: checking syslog.h presence
+configure:4871: gcc -E  conftest.c
+configure:4871: $? = 0
+configure:4871: result: yes
+configure:4871: checking for syslog.h
+configure:4871: result: yes
+configure:4871: checking for unistd.h
+configure:4871: result: yes
+configure:4881: checking for stdbool.h that conforms to C99
+configure:4948: gcc -c -g -O2  conftest.c >&5
+conftest.c:76:24: warning: address of 's' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             bool e = &s;
+                  ~    ^
+conftest.c:80:23: warning: address of array 'a' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             return (!a + !b + !c + !d + !e + !f + !g + !h + !i + !!j + !k + !!l
+                     ~^
+conftest.c:80:28: warning: address of array 'b' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             return (!a + !b + !c + !d + !e + !f + !g + !h + !i + !!j + !k + !!l
+                          ~^
+conftest.c:80:33: warning: address of array 'c' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             return (!a + !b + !c + !d + !e + !f + !g + !h + !i + !!j + !k + !!l
+                               ~^
+conftest.c:80:38: warning: address of array 'd' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             return (!a + !b + !c + !d + !e + !f + !g + !h + !i + !!j + !k + !!l
+                                    ~^
+conftest.c:80:48: warning: address of array 'f' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             return (!a + !b + !c + !d + !e + !f + !g + !h + !i + !!j + !k + !!l
+                                              ~^
+conftest.c:80:53: warning: address of array 'g' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             return (!a + !b + !c + !d + !e + !f + !g + !h + !i + !!j + !k + !!l
+                                                   ~^
+conftest.c:80:58: warning: address of array 'h' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             return (!a + !b + !c + !d + !e + !f + !g + !h + !i + !!j + !k + !!l
+                                                        ~^
+conftest.c:80:63: warning: address of array 'i' will always evaluate to 'true' [-Wpointer-bool-conversion]
+             return (!a + !b + !c + !d + !e + !f + !g + !h + !i + !!j + !k + !!l
+                                                             ~^
+conftest.c:81:30: warning: address of array 'n' will always evaluate to 'true' [-Wpointer-bool-conversion]
+                            ~^
+conftest.c:81:35: warning: address of array 'o' will always evaluate to 'true' [-Wpointer-bool-conversion]
+                                 ~^
+conftest.c:81:40: warning: address of array 'p' will always evaluate to 'true' [-Wpointer-bool-conversion]
+                                      ~^
+12 warnings generated.
+configure:4948: $? = 0
+configure:4955: result: yes
+configure:4957: checking for _Bool
+configure:4957: gcc -c -g -O2  conftest.c >&5
+configure:4957: $? = 0
+configure:4957: gcc -c -g -O2  conftest.c >&5
+conftest.c:63:20: error: expected expression
+if (sizeof ((_Bool)))
+                   ^
+1 error generated.
+configure:4957: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mhssvau"
+| #define PACKAGE_TARNAME "mhssvau"
+| #define PACKAGE_VERSION "1.0"
+| #define PACKAGE_STRING "mhssvau 1.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "mhssvau"
+| #define VERSION "1.0"
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_MKDIR 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_SYSLOG_H 1
+| #define HAVE_UNISTD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((_Bool)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:4957: result: yes
+configure:4968: checking for pid_t
+configure:4968: gcc -c -g -O2  conftest.c >&5
+configure:4968: $? = 0
+configure:4968: gcc -c -g -O2  conftest.c >&5
+conftest.c:64:20: error: expected expression
+if (sizeof ((pid_t)))
+                   ^
+1 error generated.
+configure:4968: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mhssvau"
+| #define PACKAGE_TARNAME "mhssvau"
+| #define PACKAGE_VERSION "1.0"
+| #define PACKAGE_STRING "mhssvau 1.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "mhssvau"
+| #define VERSION "1.0"
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_MKDIR 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_SYSLOG_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE__BOOL 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((pid_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:4968: result: yes
+configure:4981: checking vfork.h usability
+configure:4981: gcc -c -g -O2  conftest.c >&5
+conftest.c:61:10: fatal error: 'vfork.h' file not found
+#include <vfork.h>
+         ^~~~~~~~~
+1 error generated.
+configure:4981: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mhssvau"
+| #define PACKAGE_TARNAME "mhssvau"
+| #define PACKAGE_VERSION "1.0"
+| #define PACKAGE_STRING "mhssvau 1.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "mhssvau"
+| #define VERSION "1.0"
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_MKDIR 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_SYSLOG_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE__BOOL 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| #include <vfork.h>
+configure:4981: result: no
+configure:4981: checking vfork.h presence
+configure:4981: gcc -E  conftest.c
+conftest.c:28:10: fatal error: 'vfork.h' file not found
+#include <vfork.h>
+         ^~~~~~~~~
+1 error generated.
+configure:4981: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mhssvau"
+| #define PACKAGE_TARNAME "mhssvau"
+| #define PACKAGE_VERSION "1.0"
+| #define PACKAGE_STRING "mhssvau 1.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "mhssvau"
+| #define VERSION "1.0"
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_MKDIR 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_SYSLOG_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE__BOOL 1
+| /* end confdefs.h.  */
+| #include <vfork.h>
+configure:4981: result: no
+configure:4981: checking for vfork.h
+configure:4981: result: no
+configure:4994: checking for fork
+configure:4994: gcc -o conftest -g -O2   conftest.c  >&5
+configure:4994: $? = 0
+configure:4994: result: yes
+configure:4994: checking for vfork
+configure:4994: gcc -o conftest -g -O2   conftest.c  >&5
+conftest.c:52:6: warning: incompatible redeclaration of library function 'vfork' [-Wincompatible-library-redeclaration]
+char vfork ();
+     ^
+conftest.c:52:6: note: 'vfork' is a builtin with type 'int (void)'
+1 warning generated.
+configure:4994: $? = 0
+configure:4994: result: yes
+configure:5004: checking for working fork
+configure:5026: gcc -o conftest -g -O2   conftest.c  >&5
+configure:5026: $? = 0
+configure:5026: ./conftest
+configure:5026: $? = 0
+configure:5036: result: yes
+configure:5057: checking for working vfork
+configure:5167: result: yes
+configure:5192: checking for off_t
+configure:5192: gcc -c -g -O2  conftest.c >&5
+configure:5192: $? = 0
+configure:5192: gcc -c -g -O2  conftest.c >&5
+conftest.c:68:20: error: expected expression
+if (sizeof ((off_t)))
+                   ^
+1 error generated.
+configure:5192: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mhssvau"
+| #define PACKAGE_TARNAME "mhssvau"
+| #define PACKAGE_VERSION "1.0"
+| #define PACKAGE_STRING "mhssvau 1.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "mhssvau"
+| #define VERSION "1.0"
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_MKDIR 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_SYSLOG_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE__BOOL 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((off_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:5192: result: yes
+configure:5203: checking for pid_t
+configure:5203: result: yes
+configure:5214: checking for size_t
+configure:5214: gcc -c -g -O2  conftest.c >&5
+configure:5214: $? = 0
+configure:5214: gcc -c -g -O2  conftest.c >&5
+conftest.c:68:21: error: expected expression
+if (sizeof ((size_t)))
+                    ^
+1 error generated.
+configure:5214: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "mhssvau"
+| #define PACKAGE_TARNAME "mhssvau"
+| #define PACKAGE_VERSION "1.0"
+| #define PACKAGE_STRING "mhssvau 1.0"
+| #define PACKAGE_BUGREPORT ""
+| #define PACKAGE_URL ""
+| #define PACKAGE "mhssvau"
+| #define VERSION "1.0"
+| #define HAVE_FTRUNCATE 1
+| #define HAVE_MKDIR 1
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_FCNTL_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_SYSLOG_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE__BOOL 1
+| #define HAVE_FORK 1
+| #define HAVE_VFORK 1
+| #define HAVE_WORKING_VFORK 1
+| #define HAVE_WORKING_FORK 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| int
+| main ()
+| {
+| if (sizeof ((size_t)))
+| 	    return 0;
+|   ;
+|   return 0;
+| }
+configure:5214: result: yes
+configure:5225: checking for uint16_t
+configure:5225: gcc -c -g -O2  conftest.c >&5
+configure:5225: $? = 0
+configure:5225: result: yes
+configure:5237: checking for uint32_t
+configure:5237: gcc -c -g -O2  conftest.c >&5
+configure:5237: $? = 0
+configure:5237: result: yes
+configure:5363: checking that generated files are newer than configure
+configure:5369: result: done
+configure:5396: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -154,23 +827,34 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on salvia.local
 
-config.status:852: creating Makefile
-config.status:852: creating src/Makefile
-config.status:852: creating config.h
-config.status:1066: executing depfiles commands
-config.status:1143: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-config.status:1148: $? = 0
+config.status:882: creating Makefile
+config.status:882: creating src/Makefile
+config.status:882: creating config.h
+config.status:1048: config.h is unchanged
+config.status:1096: executing depfiles commands
+config.status:1173: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+make: Nothing to be done for `am--depfiles'.
+config.status:1178: $? = 0
 
 ## ---------------- ##
 ## Cache variables. ##
 ## ---------------- ##
 
 ac_cv_build=x86_64-apple-darwin17.5.0
+ac_cv_c_compiler_gnu=yes
+ac_cv_c_uint16_t=yes
+ac_cv_c_uint32_t=yes
 ac_cv_cxx_compiler_gnu=yes
 ac_cv_env_CCC_set=
 ac_cv_env_CCC_value=
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
 ac_cv_env_CPPFLAGS_set=
 ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
 ac_cv_env_CXXFLAGS_set=
 ac_cv_env_CXXFLAGS_value=
 ac_cv_env_CXX_set=
@@ -185,16 +869,48 @@ ac_cv_env_host_alias_set=
 ac_cv_env_host_alias_value=
 ac_cv_env_target_alias_set=
 ac_cv_env_target_alias_value=
+ac_cv_func_fork=yes
+ac_cv_func_fork_works=yes
+ac_cv_func_ftruncate=yes
+ac_cv_func_mkdir=yes
+ac_cv_func_vfork=yes
+ac_cv_func_vfork_works=yes
+ac_cv_header_fcntl_h=yes
+ac_cv_header_inttypes_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdbool_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_syslog_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_header_vfork_h=no
 ac_cv_host=x86_64-apple-darwin17.5.0
 ac_cv_objext=o
+ac_cv_path_EGREP='/usr/bin/grep -E'
+ac_cv_path_GREP=/usr/bin/grep
 ac_cv_path_install='/usr/bin/install -c'
 ac_cv_prog_AWK=awk
+ac_cv_prog_CPP='gcc -E'
+ac_cv_prog_ac_ct_CC=gcc
 ac_cv_prog_ac_ct_CXX=g++
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
 ac_cv_prog_cxx_g=yes
 ac_cv_prog_make_make_set=yes
 ac_cv_target=x86_64-apple-darwin17.5.0
+ac_cv_type__Bool=yes
+ac_cv_type_off_t=yes
+ac_cv_type_pid_t=yes
+ac_cv_type_size_t=yes
+am_cv_CC_dependencies_compiler_type=gcc3
 am_cv_CXX_dependencies_compiler_type=gcc3
 am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
 
 ## ----------------- ##
 ## Output variables. ##
@@ -213,6 +929,10 @@ AUTOCONF='${SHELL} /Users/lxm/Workspace/mhssvau/missing autoconf'
 AUTOHEADER='${SHELL} /Users/lxm/Workspace/mhssvau/missing autoheader'
 AUTOMAKE='${SHELL} /Users/lxm/Workspace/mhssvau/missing automake-1.16'
 AWK='awk'
+CC='gcc'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-g -O2'
+CPP='gcc -E'
 CPPFLAGS=''
 CXX='g++'
 CXXDEPMODE='depmode=gcc3'
@@ -223,7 +943,9 @@ DEPDIR='.deps'
 ECHO_C='\c'
 ECHO_N=''
 ECHO_T=''
+EGREP='/usr/bin/grep -E'
 EXEEXT=''
+GREP='/usr/bin/grep'
 INSTALL_DATA='${INSTALL} -m 644'
 INSTALL_PROGRAM='${INSTALL}'
 INSTALL_SCRIPT='${INSTALL}'
@@ -247,9 +969,12 @@ SET_MAKE=''
 SHELL='/bin/sh'
 STRIP=''
 VERSION='1.0'
+ac_ct_CC='gcc'
 ac_ct_CXX='g++'
 am__EXEEXT_FALSE=''
 am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
 am__fastdepCXX_FALSE='#'
 am__fastdepCXX_TRUE=''
 am__include='include'
@@ -312,6 +1037,27 @@ target_vendor='apple'
 #define PACKAGE_URL ""
 #define PACKAGE "mhssvau"
 #define VERSION "1.0"
+#define HAVE_FTRUNCATE 1
+#define HAVE_MKDIR 1
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYSLOG_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE__BOOL 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
 
 configure: exit 0
 
@@ -330,4 +1076,24 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on salvia.local
 
-config.status:852: creating config.h
+config.status:882: creating config.h
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by mhssvau config.status 1.0, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status src/Makefile depfiles
+
+on salvia.local
+
+config.status:882: creating src/Makefile
+config.status:1096: executing depfiles commands
+config.status:1173: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+config.status:1178: $? = 0

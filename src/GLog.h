@@ -13,7 +13,6 @@
 
 #include <stdio.h>
 #include <boost/thread.hpp>
-#include <boost/smart_ptr.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
 enum LOG_TYPE {// 日志类型
@@ -55,7 +54,6 @@ public:
 protected:
 	/* 数据类型 */
 	typedef boost::unique_lock<boost::mutex> mutex_lock; //< 基于boost::mutex的互斥锁
-	typedef boost::shared_ptr<boost::thread> threadptr;
 
 protected:
 	/* 成员变量 */
@@ -64,6 +62,6 @@ protected:
 	FILE *fd_;			//< 日志文件描述符
 };
 
-extern GLog _gLog;
+extern GLog g_Log;
 
 #endif /* GLOG_H_ */
